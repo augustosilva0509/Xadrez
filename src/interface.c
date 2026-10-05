@@ -1,5 +1,6 @@
 #include "interface.h"
 #include <stdio.h>
+#include <Windows.h>
 
 void draw_match_interface(int board[8][8]){
     char* pieces[12]={"♙","♖","♘","♗","♕","♔","♟","♜","♞","♝","♛","♚"};
