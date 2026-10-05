@@ -1,9 +1,5 @@
 #include "interface.h"
 
-int main(){
-    return 0;
-}
-
 void draw_match_interface(int board[8][8]){
     char* pieces[12]={"♙","♖","♘","♗","♕","♔","♟","♜","♞","♝","♛","♚"};
     system("cls");
