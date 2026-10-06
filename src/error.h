@@ -1,6 +1,5 @@
-#ifndef _ERROR_
-#define _ERROR_
-
+#ifndef _ERROR_H_
+#define _ERROR_H_
 
 /*
     Define o erro atual como tratado.

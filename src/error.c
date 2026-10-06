@@ -10,7 +10,7 @@ int error_handled(int handled_error_code){
     return -1;
 }
 
-void set_error(int error_code){
+void set_error_code(int error_code){
     CHESS_ERROR_CODE = error_code;
     return;
 }
