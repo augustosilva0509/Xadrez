@@ -2,6 +2,15 @@
 #define _ERROR_
 
 
+/*
+    Define o erro atual como tratado.
+    #### Parâmetro:
+     - handled_error_code: o código do erro que foi tratado
+    #### Retorno:
+     - 0: tudo ocorreu bem;
+     - -1: código de erro atual não bate com o código dado;
+*/
+int error_handled(int handled_error_code);
 
 /*
     Retorna a mensagem do código de erro atual.

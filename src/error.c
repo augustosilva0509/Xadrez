@@ -2,6 +2,14 @@
 
 int CHESS_ERROR_CODE = 0;
 
+int error_handled(int handled_error_code){
+    if(CHESS_ERROR_CODE == handled_error_code){
+        CHESS_ERROR_CODE = 0;
+        return 0;
+    }
+    return -1;
+}
+
 void set_error(int error_code){
     CHESS_ERROR_CODE = error_code;
     return;
