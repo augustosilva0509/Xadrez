@@ -14,7 +14,7 @@ int main(){
 
     int *user_input = NULL;
     do{
-        if(ERROR_CODE != 0){
+        if(CHESS_ERROR_CODE != 0){
             print_message(get_error_message());
             print_message(" | Tente novamente\n");
         }
