@@ -1,7 +1,7 @@
 #include "error.h"
 
 char* get_error_message(){
-    switch (ERROR_CODE)
+    switch (CHESS_ERROR_CODE)
     {
     case 1:
         return "Entrada inválida.";
