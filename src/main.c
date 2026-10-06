@@ -14,9 +14,10 @@ int main(){
 
     int *user_input = NULL;
     do{
-        if(CHESS_ERROR_CODE != 0){
+        if(get_error_code() == 1){
             print_message(get_error_message());
             print_message(" | Tente novamente\n");
+            error_handled(1);
         }
         user_input = get_user_ingame_input();
         

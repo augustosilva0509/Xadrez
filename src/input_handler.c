@@ -45,7 +45,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[0] = 7;
         break;
     default:
-        CHESS_ERROR_CODE = 1;
+        set_error_code(1);
         return NULL;
     }
     switch (x2)
@@ -75,7 +75,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[2] = 7;
         break;
     default:
-        CHESS_ERROR_CODE = 1;
+        set_error_code(1);
         return NULL;
     }
     switch (y1)
@@ -105,7 +105,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[1] = 0;
         break;
     default:
-        CHESS_ERROR_CODE = 1;
+        set_error_code(1);
         return NULL;
     }
     switch (y2)
@@ -135,7 +135,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[3] = 0;
         break;
     default:
-        CHESS_ERROR_CODE = 1;
+        set_error_code(1);
         return NULL;
     }
 }
