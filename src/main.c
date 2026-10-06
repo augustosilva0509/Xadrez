@@ -20,7 +20,7 @@ int main(){
         }
         user_input = get_user_ingame_input();
         
-    }while(user_input != NULL);
+    }while(user_input == NULL);
 
     #ifndef DEBUG
     printf("%d,%d -> %d,%d", user_input[0], user_input[1], user_input[2], user_input[3])
