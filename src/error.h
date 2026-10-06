@@ -11,10 +11,9 @@ typedef enum Error{
     #### Parâmetro:
      - handled_error_code: o código do erro que foi tratado
     #### Retorno:
-     - 0: tudo ocorreu bem;
-     - -1: código de erro atual não bate com o código dado;
+     - Para a execução caso o erro atual não seja igual ao dado
 */
-int error_handled(Error handled_error_code);
+void error_handled(Error handled_error_code);
 
 /*
     Retorna a mensagem do código de erro atual.
