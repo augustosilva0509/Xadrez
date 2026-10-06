@@ -17,7 +17,7 @@ int main(){
         if(get_error_code() == INVALID_USER_INPUT){
             print_message(get_error_message());
             print_message(" | Tente novamente\n");
-            error_handled(NONE);
+            error_handled(INVALID_USER_INPUT);
         }
         user_input = get_user_ingame_input();
         
