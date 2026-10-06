@@ -1,26 +1,26 @@
 #include "error.h"
 
-int CHESS_ERROR_CODE = 0;
+Error error_status = NONE;
 
-int error_handled(int handled_error_code){
-    if(CHESS_ERROR_CODE == handled_error_code){
-        CHESS_ERROR_CODE = 0;
+int error_handled(Error handled_error_code){
+    if(error_status == handled_error_code){
+        error_status = NONE;
         return 0;
     }
     return -1;
 }
 
-void set_error_code(int error_code){
-    CHESS_ERROR_CODE = error_code;
+void set_error_code(Error error_code){
+    error_status = error_code;
     return;
 }
 
-int get_error_code(){
-    return CHESS_ERROR_CODE;
+Error get_error_code(){
+    return error_status;
 }
 
 char* get_error_message(){
-    switch (CHESS_ERROR_CODE)
+    switch (error_status)
     {
     case 1:
         return "Entrada inválida.";
