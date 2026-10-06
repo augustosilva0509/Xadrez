@@ -5,6 +5,7 @@
     Pega as entradas do usuário.
     #### Retorno:
      - int[4] = {x1,y1,x2,y2}; Para ser usado numa matriz 8x8
+     - -1: erro
 */
 int* get_user_ingame_input();
 
