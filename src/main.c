@@ -14,17 +14,19 @@ int main(){
 
     int *user_input = NULL;
     do{
-        if(get_error_code() == 1){
+        if(get_error_code() == INVALID_USER_INPUT){
             print_message(get_error_message());
             print_message(" | Tente novamente\n");
-            error_handled(1);
+            error_handled(NONE);
         }
         user_input = get_user_ingame_input();
         
     }while(user_input == NULL);
 
-    #ifndef DEBUG
-    printf("%d,%d -> %d,%d", user_input[0], user_input[1], user_input[2], user_input[3])
+    #ifdef DEBUG
+    printf("%d,%d -> %d,%d", user_input[0], user_input[1], user_input[2], user_input[3]);
     #endif
+
+    
     return 0;
 }

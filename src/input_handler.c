@@ -45,7 +45,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[0] = 7;
         break;
     default:
-        set_error_code(1);
+        set_error_code(INVALID_USER_INPUT);
         return NULL;
     }
     switch (x2)
@@ -75,7 +75,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[2] = 7;
         break;
     default:
-        set_error_code(1);
+        set_error_code(INVALID_USER_INPUT);
         return NULL;
     }
     switch (y1)
@@ -105,7 +105,7 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[1] = 0;
         break;
     default:
-        set_error_code(1);
+        set_error_code(INVALID_USER_INPUT);
         return NULL;
     }
     switch (y2)
@@ -135,16 +135,17 @@ int *pos_to_matrix_index(char x1, int y1, char x2, int y2)
         index_pos[3] = 0;
         break;
     default:
-        set_error_code(1);
+        set_error_code(INVALID_USER_INPUT);
         return NULL;
     }
+    return index_pos;
 }
 
 int* get_user_ingame_input(){
     int y1,y2;
     char x1,x2;
     print_message("Digite o movimento (ex.: e2 e4): ");
-    scanf("%c%d %c%d ", &x1, &y1, &x2, &y2);
+    scanf(" %c%d %c%d", &x1, &y1, &x2, &y2);
     fflush(stdin);
     return pos_to_matrix_index(x1,y1,x2,y2);
 }
