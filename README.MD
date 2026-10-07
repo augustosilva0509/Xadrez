@@ -1,6 +1,12 @@
 # Xadrez
 
-Um jogo de xadrez usando da interface de linha de comando (CLI) do terminal
+Um jogo de xadrez usando da interface de linha de comando (CLI) do terminal.
+
+### Objetivos de aprendizado com o projeto
+- Desenvolver o meu primeiro projeto real usando o Git e o GitHub;
+- Aprender a estrutura de um projeto desenvolvido em C;
+- Aprender boas práticas de desenvolvimento de software;
+- Desafiar os meus conhecimentos, assim como compreender o meu código antigo e não finalizado do mesmo projeto.
 
 # Definição do projeto
 

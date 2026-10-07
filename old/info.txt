@@ -1,0 +1,75 @@
+desenha o tabuleiro() FEITO
+    Desenha com ASCII o tabuleiro.
+    simples.
+    espaços pretos e brancos dá pra usar alguma formula, acha a formula ai.
+    tem o set de caracteres pro xadrez.
+
+validação de movimento()
+    x,y são inteiros que estão no escopo de 0 à 7 - representam o movimento final de uma peça qualquer
+    peão: FEITO
+        move 1 casa para frente, no máximo. (x==1 && y==0) FEITO
+        no primeiro movimento pode mover 2 casas. (x==2 && y==0) FEITO
+        en passant. FEITO
+        come na diagonal, (x==1 && x-|y|==0) FEITO
+    bispo: FEITO
+        move diagonalmente, (|x|-|y|==0)
+    torre: FEITO
+        move em linha reta, ((x!=0 && y==0) || (x==0 && y!=0))
+    dama: FEITO
+        move diagonalmente e em linha reta, 
+        ((|x|-|y|==0) || ((x!=0 && y==0) || (x==0 && y!=0)))
+        (diagonal     ou            linha reta             )
+    rei: FEITO
+        move 1 casa em qualquer direção, (x<=1 && y<=1). FEITO
+        não pode mover para casas em cheque. FEITO
+        caso o rei não tenha se movido e nem esteja em cheque ele pode fazer o roque FEITO
+            se move duas casas para o lado (|x|==2 && y==0) FEITO
+            a torre que está na direção do roque não pode ter sido movida, FEITO
+            e andará 2 ou 3 casas na direção do rei ((|x|==2 || |x|==3) && y==0) FEITO
+            ADD - as casas entre o rei e a casa final não podem estar em cheque. FEITO
+    cavalo: FEITO
+        move em L, ((|x|==2 && |y|==1) || (|x|==1 && |y|==2))
+    
+    não pode mover nenhuma peça que deixe o próprio rei em cheque.
+
+casa em cheque() FEITO
+    verifica cada direção que uma peça possa atacar.
+    diagonais:
+        peão e rei à 1 casa de distancia.
+        bispos e damas em qualquer distancia.
+    linhas retas:
+        rei à 1 casa de distancia.
+        torres e damas em qualquer distancia.
+    em L:
+        cavalos.
+
+verifica de quem é a jogada() FEITO
+    usa 0 para a jogada das brancas e 1 para a jogada das pretas.
+    uma função estatica pode funcionar aqui.
+
+verifica se o rei está em cheque() FEITO
+    passa pelo tabuleiro procuruando a posição do rei
+    verifica se a casa em que o rei estiver está em cheque.
+
+verifica chequemate() FEITO
+    verifica se todas as casas ao redor do rei estão em cheque, incluso a que ele está.
+    usa a função já criada "casa em cheque()"
+    conta como vitória.
+
+verifica afogamento()
+    verifica se as casas ao redor do rei estão em cheque,
+    e se não tem nenhum movimento válido para jogar.
+    (todas as peças estão presas)
+    conta como empate.
+
+verifica se pode evitar chequemate() FEITO
+    verifica o jogador em chequemate tem alguma jogada na frente do cheque do rei,
+    ou se pode comer a peça que está dando cheque.
+
+verifica se a tomada de peça é valida() FEITO
+    peças de mesma cor não podem se tomar,
+    somente tomadas de cores diferentes.
+
+promoção de peões()
+    um peão pode ser promovido quando chegar na última casa contrária a do seu início,
+    podendo se transformar em qualquer peça, exceto o rei.
