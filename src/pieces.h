@@ -13,7 +13,7 @@ typedef enum{
     WHITE_HORSE,
     WHITE_BISHOP,
     WHITE_QUEEN,
-    WHITE_KING,
+    WHITE_KING
 } Piece;
 
 #endif
